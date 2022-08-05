@@ -1,8 +1,10 @@
 package com.senhoresenhora.injesao.notificadores;
 
 import com.senhoresenhora.injesao.clientes.Cliente;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+@Qualifier("devagar")
 @Component
 public class NotificadorSMS implements Notificador{
 

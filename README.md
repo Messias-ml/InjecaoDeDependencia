@@ -20,7 +20,11 @@ Utilizamos os notificadores como base dizendo o que precisa ter (um contrato) e 
 **Os demais notificadores**<br>
 É interessante ressaltarmos que todos implementam a interface notificadores, porém anotamos ele como o bean @Component, e este faz a **INVERSÂO DE CONTROLE**
 pois invés de implementarmos um acoplamento forte nessas classes, deixamos a cargo do spring, de maneira que: A class que tiver com o @Component e com a anotation
-`@Primary` vai ser vista primeiro pelo spring e será acessada, resolvendo assim, o problema de ambiguidade.
+`@Qualifier` com o parametro desejado, vai ser levado em consideração.
+
+**@QUALIFIER:** Com o qualifier a gente consegue definir qual modelo vamos deixar de envio. Se quisermos um dia trocar de rapido para devagar, mudamos somente nas class que implementa e ta tudo certo.
+Agora o rapido está com whatsApp, caso algum dia queira mudar e o rapido seja email, é so trocarmos.
+Dessa maneira o baixo acoplamento vai se manter.
 
 >PROBLEMA DE AMBIGUIDADE:
 >> acontece quando temos mais de 1 bean sendo injetado ao mesmo tempo em uma class que espera somente 1 injeção e não varias. (No nosso caso o notificador)
