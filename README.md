@@ -32,3 +32,9 @@ Dessa maneira o baixo acoplamento vai se manter.
 **ATIVAR CLIENTE** 
 Veja que interessante na class ativar cliente eu não preciso instanciar a notificação, o proprio spring ja faz essa **INJEÇÂO DE DEPENDENCIAS**
 colocando tudo que eu preciso na class.
+
+Com a adição no arquivo application.properties e a criação do outro porperties, eu posso fazer a utilização do **@Profile**
+O mesmo vai fazer com que criemos perfis e por mais que eu tenha o mesmo qualifier em ambos, ele executa somente o que esta na ambientação dele.
+EXEMPLO: se o profile é de DEV ele vai executar o codigo que estiver com profile de DEV.
+
+Neste caso, cada profile representa a 1 ambiente.
