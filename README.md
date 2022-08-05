@@ -21,3 +21,7 @@ Utilizamos os notificadores como base dizendo o que precisa ter (um contrato) e 
 É interessante ressaltarmos que todos implementam a interface notificadores, porém anotamos ele como o bean @Component, e este faz a **INVERSÂO DE CONTROLE**
 pois invés de implementarmos um acoplamento forte nessas classes, deixamos a cargo do spring, de maneira que: A class que tiver com o @Component é que vai ser o notificador atual que estará sendo usado naquele momento.
 Então podemos ter varios notificadores e neste caso, somente 1 assume a posição de ser gerenciado pelo spring e ser o notificador atual. 
+
+**ATIVAR CLIENTE** 
+Veja que interessante na class ativar cliente eu não preciso instanciar a notificação, o proprio spring ja faz essa **INJEÇÂO DE DEPENDENCIAS**
+colocando tudo que eu preciso na class.
