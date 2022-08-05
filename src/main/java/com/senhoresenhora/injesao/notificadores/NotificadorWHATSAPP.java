@@ -1,7 +1,11 @@
 package com.senhoresenhora.injesao.notificadores;
 
 import com.senhoresenhora.injesao.clientes.Cliente;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
 
+@Primary
+@Component
 public class NotificadorWHATSAPP implements Notificador{
 
     @Override

@@ -19,8 +19,11 @@ Utilizamos os notificadores como base dizendo o que precisa ter (um contrato) e 
 
 **Os demais notificadores**<br>
 É interessante ressaltarmos que todos implementam a interface notificadores, porém anotamos ele como o bean @Component, e este faz a **INVERSÂO DE CONTROLE**
-pois invés de implementarmos um acoplamento forte nessas classes, deixamos a cargo do spring, de maneira que: A class que tiver com o @Component é que vai ser o notificador atual que estará sendo usado naquele momento.
-Então podemos ter varios notificadores e neste caso, somente 1 assume a posição de ser gerenciado pelo spring e ser o notificador atual. 
+pois invés de implementarmos um acoplamento forte nessas classes, deixamos a cargo do spring, de maneira que: A class que tiver com o @Component e com a anotation
+`@Primary` vai ser vista primeiro pelo spring e será acessada, resolvendo assim, o problema de ambiguidade.
+
+>PROBLEMA DE AMBIGUIDADE:
+>> acontece quando temos mais de 1 bean sendo injetado ao mesmo tempo em uma class que espera somente 1 injeção e não varias. (No nosso caso o notificador)
 
 **ATIVAR CLIENTE** 
 Veja que interessante na class ativar cliente eu não preciso instanciar a notificação, o proprio spring ja faz essa **INJEÇÂO DE DEPENDENCIAS**

@@ -1,8 +1,9 @@
 package com.senhoresenhora.injesao.notificadores;
 
 import com.senhoresenhora.injesao.clientes.Cliente;
+import org.springframework.stereotype.Component;
 
-//@Component
+@Component
 public class NotificadorEmail implements Notificador {
 
     @Override
