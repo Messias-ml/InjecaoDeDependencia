@@ -13,6 +13,7 @@ public class AtivarClienteService {
     private Notificador notificador;
 
     public void ativarCliente(Cliente cliente){
+        cliente.setAtivo(true);
         notificador.notificarCliente(cliente, "Foi notificado o(a) cliente ");
     }
 }
